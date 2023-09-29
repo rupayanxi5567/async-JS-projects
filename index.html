@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async JS Project-1</title>
+</head>
+<body>
+    <h1> Learning from Rup  </h1>
+
+    <button id="cancel" > Cancel </button>
+    
+</body>
+<script>
+
+    let sayPuki = function(){
+        console.log("pukiiii")
+    }
+let pukiSay = setTimeout( sayPuki, 3000 )
+
+const changeText = function(){
+    document.querySelector("h1").innerHTML = "Project by Rupayan Dey" 
+}
+
+let changeH1 = setTimeout( changeText, 1500 ) //this is used in case of any offer in any e-commerce website
+
+
+let stopH1 = document.getElementById("cancel").addEventListener("click",function(e){
+    clearTimeout(changeH1)
+    console.log("stopped")
+})
+
+</script>
+
+</html>
